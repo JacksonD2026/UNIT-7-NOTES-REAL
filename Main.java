@@ -71,6 +71,55 @@ System.out.println("The first thing to do is to " + toDoList.get(0) );
 toDoList.remove(0);
 System.out.println(toDoList);
 
+ArrayList<Integer> bingoNumbers = new ArrayList<Integer>();
+
+bingoNumbers.add(99);
+bingoNumbers.add(29);
+bingoNumbers.add(77);
+bingoNumbers.add(13);
+
+int total = 0;
+int product = 1;
+for(Integer num : bingoNumbers) {
+   total = total + num;
+   product = product *= num;
+}
+
+System.out.println(total);
+System.out.println(product);
+
+int sum = 0;
+
+for(int i = 0; i < bingoNumbers.size(); i++) {
+   sum = sum + bingoNumbers.get(i);
+}
+
+System.out.println(sum);
+
+
+// WHILE loops ( for conditionals, when you don't know exactly how many times to loop)
+ArrayList<String> watchList = new ArrayList<String>();
+watchList.add("Traitors");
+watchList.add("Severance");
+watchList.add("Sopranos");
+watchList.add("Snowfall");
+
+// Example: search and remove 
+
+boolean found = false;
+int index = 0;
+String watchedShow = "Severance"; 
+while (index < watchList.size()) {
+if(watchedShow.equals(watchedShow(index))) {
+   watchList.remove(index);
+   found = true;
+}
+else {
+   index++;
+}
+}
+
+System.out.println(watchList);
 
 
       
